@@ -1,0 +1,16 @@
+{"test_apps":[
+        {
+            "title":"QuadUI",
+            "executable_path":"D:\\workData\\test_data2\\testFrame\\quadui-1.2.1-SNAPSHOT-Beta24-hf1.jar",
+            "work_dir":"D:\\workData\\test_data2\\Machakos_Nepal_play",
+            "output_dir":"..\\testFrame\\output",
+            "options":["-cli", "-clean", "-s", "-DAJ"],
+            "specific_options":
+                {
+                    "rawdataPath":"Survey_data_import_baseline.zip",
+                    "overlayPath":"Field_Overlay.zip",
+                    "seasonalPath":"Seasonal_strategy.zip"
+                }
+        }
+    ]
+}
