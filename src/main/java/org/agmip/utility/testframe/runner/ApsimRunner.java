@@ -19,9 +19,8 @@ public class ApsimRunner extends ExeRunner {
     protected void printSubProcessLog(Process p, Logger LOG) throws IOException {
         BufferedReader brInfo = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String line;
-        String executableName = executablePath.getName();
         while ((line = brInfo.readLine()) != null) {
-            LOG.info("{}: {}", executableName, line);
+            LOG.info("{}: {}", getTitle(), line);
             if (line.contains("exiting")) {
                 p.destroy();
                 break;

@@ -33,11 +33,11 @@ public class JarRunner extends TestRunner {
 
     @Override
     public final void run() throws IOException {
-        LOG.info("Run {}...", executablePath.getName());
+        LOG.info("Run {}...", getTitle());
         if (isJavaInstalled()) {
             Process p = getProcess();
             printSubProcessLog(p, LOG);
-            LOG.info("{} ends with code [{}]", executablePath.getName(), p.exitValue());
+            LOG.info("{} ends with code [{}]", getTitle(), p.exitValue());
         } else {
             LOG.error("Java is not installed or configured correctly in the system.");
         }

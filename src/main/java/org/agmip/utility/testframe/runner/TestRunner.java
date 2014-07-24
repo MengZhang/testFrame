@@ -78,7 +78,7 @@ public abstract class TestRunner {
 
     public ArrayList<String> getArgsList() {
         ArrayList<String> argsList = new ArrayList();
-        argsList.add(executablePath.getPath());
+        argsList.add(getTitle());
         if (options != null) {
             argsList.addAll(options);
         }
@@ -98,9 +98,8 @@ public abstract class TestRunner {
     protected void printSubProcessLog(Process p, Logger LOG) throws IOException {
         BufferedReader brInfo = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String line;
-        String executableName = executablePath.getName();
         while ((line = brInfo.readLine()) != null) {
-            LOG.info("{}: {}", executableName, line);
+            LOG.info("{}: {}", getTitle(), line);
         }
     }
 

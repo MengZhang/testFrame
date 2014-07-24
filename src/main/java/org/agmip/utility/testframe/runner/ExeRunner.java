@@ -22,14 +22,13 @@ public class ExeRunner extends TestRunner {
 
     @Override
     public void run() throws IOException {
-        LOG.info("Run {}...", executablePath.getName());
+        LOG.info("Run {}...", getTitle());
         Process p = getProcess();
         printSubProcessLog(p, LOG);
-        String executableName = executablePath.getName();
         try {
-            LOG.info("{} ends with code [{}]", executableName, p.waitFor());
+            LOG.info("{} ends with code [{}]", getTitle(), p.waitFor());
         } catch (InterruptedException ex) {
-            LOG.error("{} got error: [{}]", executableName, ex.getMessage());
+            LOG.error("{} got error: [{}]", getTitle(), ex.getMessage());
         }
     }
 }
