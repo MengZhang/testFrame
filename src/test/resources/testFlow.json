@@ -1,10 +1,11 @@
 {"test_apps":[
         {
             "title":"QuadUI",
+            "runner_type":"quadui",
             "executable_path":"D:\\workData\\test_data2\\testFrame\\quadui-1.2.1-SNAPSHOT-Beta24-hf1.jar",
             "work_dir":"D:\\workData\\test_data2\\Machakos_Nepal_play",
             "output_dir":"..\\testFrame\\output",
-            "options":["-cli", "-clean", "-s", "-DAJ"],
+            "options":["-cli", "-s", "-DAJ"],
             "specific_options":
                 {
                     "rawdataPath":"Survey_data_import_baseline.zip",

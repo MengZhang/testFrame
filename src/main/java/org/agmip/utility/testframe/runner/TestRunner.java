@@ -17,6 +17,7 @@ public abstract class TestRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(TestRunner.class);
 
+    protected String title;
     protected File executablePath;
     protected File workDir;
     protected File outputDir;
@@ -27,6 +28,7 @@ public abstract class TestRunner {
         this.workDir = new File(workPath);
         this.outputDir = new File(outputPath);
         this.options = new ArrayList();
+        this.title = this.executablePath.getName();
     }
 
     public TestRunner(String executablePath) {
@@ -41,8 +43,19 @@ public abstract class TestRunner {
         return outputDir;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
     public void setOptions(String optStr) {
         this.options.clear();
+        if (optStr == null || optStr.equals("")) {
+            return;
+        }
         String[] options = optStr.split(" ");
         if (options != null) {
             this.options.addAll(Arrays.asList(options));
@@ -53,6 +66,13 @@ public abstract class TestRunner {
         this.options.clear();
         if (options != null) {
             this.options.addAll(Arrays.asList(options));
+        }
+    }
+
+    public void setOptions(ArrayList<String> options) {
+        this.options.clear();
+        if (options != null) {
+            this.options.addAll(options);
         }
     }
 

@@ -12,10 +12,10 @@ import org.slf4j.LoggerFactory;
 public class QuadUIJarRunner extends JarRunner {
 
     private static Logger LOG = LoggerFactory.getLogger(QuadUIJarRunner.class);
-    private File rawdataPath = new File("");
-    private File linkPath = new File("");
-    private File overlayPath = new File("");
-    private File seasonalPath = new File("");
+    private File rawdataPath = new File(" ");
+    private File linkPath = new File(" ");
+    private File overlayPath = new File(" ");
+    private File seasonalPath = new File(" ");
 //    private boolean isZipFlg = false;
 //    private boolean isCleanFlg = false;
 //    private String mode = "none";
@@ -28,7 +28,7 @@ public class QuadUIJarRunner extends JarRunner {
     public QuadUIJarRunner(String executablePath) {
         this(executablePath, "", "");
     }
-    
+
     public void setRawdataPath(String rawdataPath) {
         this.rawdataPath = new File(rawdataPath);
     }
@@ -44,7 +44,7 @@ public class QuadUIJarRunner extends JarRunner {
     public void setSeasonalPath(String seasonalPath) {
         this.seasonalPath = new File(seasonalPath);
     }
-    
+
 //    public void setMode(String mode) {
 //        if (mode == null || mode.equals("")) {
 //            LOG.warn("Invalid mode value {} for QuadUI!", mode);
@@ -58,7 +58,6 @@ public class QuadUIJarRunner extends JarRunner {
 //            LOG.warn("Invalid mode value {} for QuadUI!", mode);
 //        }
 //    }
-
     @Override
     public ArrayList<String> getArgsList() {
         ArrayList<String> argsList = new ArrayList();
