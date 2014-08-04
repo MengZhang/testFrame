@@ -21,13 +21,13 @@ public abstract class TestRunner {
     protected File executablePath;
     protected File workDir;
     protected File outputDir;
-    protected ArrayList<String> options;
+    protected ArrayList<String> arguments;
 
     public TestRunner(String executablePath, String workPath, String outputPath) {
         this.executablePath = new File(executablePath);
         this.workDir = new File(workPath);
         this.outputDir = new File(outputPath);
-        this.options = new ArrayList();
+        this.arguments = new ArrayList();
         this.title = this.executablePath.getName();
     }
 
@@ -51,36 +51,40 @@ public abstract class TestRunner {
         return this.title;
     }
 
-    public void setOptions(String optStr) {
-        this.options.clear();
+    public void setArguments(String optStr) {
+        this.arguments.clear();
         if (optStr == null || optStr.equals("")) {
             return;
         }
-        String[] options = optStr.split(" ");
-        if (options != null) {
-            this.options.addAll(Arrays.asList(options));
+        String[] opts = optStr.split(" ");
+        if (opts != null) {
+            this.arguments.addAll(Arrays.asList(opts));
         }
     }
 
-    public void setOptions(String... options) {
-        this.options.clear();
-        if (options != null) {
-            this.options.addAll(Arrays.asList(options));
+    public void setArguments(String... arguments) {
+        this.arguments.clear();
+        if (arguments != null) {
+            this.arguments.addAll(Arrays.asList(arguments));
         }
     }
 
-    public void setOptions(ArrayList<String> options) {
-        this.options.clear();
-        if (options != null) {
-            this.options.addAll(options);
+    public void setArguments(ArrayList<String> arguments) {
+        this.arguments.clear();
+        if (arguments != null) {
+            this.arguments.addAll(arguments);
         }
     }
+    
+    public ArrayList<String> getArguments() {
+        return this.arguments;
+    }
 
-    public ArrayList<String> getArgsList() {
+    protected ArrayList<String> getProcessArguments() {
         ArrayList<String> argsList = new ArrayList();
         argsList.add(getTitle());
-        if (options != null) {
-            argsList.addAll(options);
+        if (arguments != null) {
+            argsList.addAll(arguments);
         }
         argsList.add(outputDir.getPath());
 
@@ -88,7 +92,7 @@ public abstract class TestRunner {
     }
 
     protected Process getProcess() throws IOException {
-        ProcessBuilder pb = new ProcessBuilder(getArgsList());
+        ProcessBuilder pb = new ProcessBuilder(getProcessArguments());
         if (!workDir.getPath().equals("")) {
             pb.directory(workDir);
         }

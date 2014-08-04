@@ -23,27 +23,23 @@ public class JarRunner extends TestRunner {
     }
 
     @Override
-    public ArrayList<String> getArgsList() {
+    public ArrayList<String> getProcessArguments() {
         ArrayList<String> argsList = new ArrayList();
         argsList.add("java");
         argsList.add("-jar");
-        argsList.addAll(super.getArgsList());
+        argsList.addAll(super.getProcessArguments());
         return argsList;
     }
 
     @Override
     public final void run() throws IOException {
         LOG.info("Run {}...", getTitle());
-        if (isJavaInstalled()) {
-            Process p = getProcess();
-            printSubProcessLog(p, LOG);
-            LOG.info("{} ends with code [{}]", getTitle(), p.exitValue());
-        } else {
-            LOG.error("Java is not installed or configured correctly in the system.");
+        Process p = getProcess();
+        printSubProcessLog(p, LOG);
+        try {
+            LOG.info("{} ends with code [{}]", getTitle(), p.waitFor());
+        } catch (InterruptedException ex) {
+            LOG.error("{} got error: [{}]", getTitle(), ex.getMessage());
         }
-    }
-
-    protected boolean isJavaInstalled() {
-        return true; // TODO
     }
 }

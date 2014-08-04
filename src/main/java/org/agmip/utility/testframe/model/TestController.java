@@ -66,8 +66,8 @@ public class TestController {
             } else {
                 runner = new ExeRunner(executablePath, workDir, outputDir);
             }
-            runner.setOptions(MapUtil.getObjectOr(runnerDef, "options", new ArrayList()));
-            HashMap<String, String> spcOpts = MapUtil.getObjectOr(runnerDef, "specific_options", new HashMap());
+            runner.setArguments(MapUtil.getObjectOr(runnerDef, "arguments", new ArrayList()));
+            HashMap<String, String> spcOpts = MapUtil.getObjectOr(runnerDef, "specific_arguments", new HashMap());
             for (Entry<String, String> e : spcOpts.entrySet()) {
                 String optName = e.getKey();
                 String optValue = e.getValue();

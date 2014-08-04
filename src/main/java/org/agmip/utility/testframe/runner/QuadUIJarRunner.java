@@ -2,8 +2,6 @@ package org.agmip.utility.testframe.runner;
 
 import java.io.File;
 import java.util.ArrayList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -11,7 +9,7 @@ import org.slf4j.LoggerFactory;
  */
 public class QuadUIJarRunner extends JarRunner {
 
-    private static Logger LOG = LoggerFactory.getLogger(QuadUIJarRunner.class);
+//    private static Logger LOG = LoggerFactory.getLogger(QuadUIJarRunner.class);
     private File rawdataPath = new File(" ");
     private File linkPath = new File(" ");
     private File overlayPath = new File(" ");
@@ -59,9 +57,9 @@ public class QuadUIJarRunner extends JarRunner {
 //        }
 //    }
     @Override
-    public ArrayList<String> getArgsList() {
+    public ArrayList<String> getProcessArguments() {
         ArrayList<String> argsList = new ArrayList();
-        argsList.addAll(super.getArgsList());
+        argsList.addAll(super.getProcessArguments());
         argsList.remove(argsList.size() - 1);
         argsList.add(rawdataPath.getPath());
         argsList.add(linkPath.getPath());

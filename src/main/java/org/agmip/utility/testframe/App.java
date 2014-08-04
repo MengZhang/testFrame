@@ -34,7 +34,7 @@ public class App {
 
         // QuadUI
         QuadUIJarRunner quadui = new QuadUIJarRunner(quaduiPath, quaduiWorkDir, quaduiOutputDir);
-        quadui.setOptions("-cli -clean -s -DAJ");
+        quadui.setArguments("-cli -clean -s -DAJ");
         quadui.setRawdataPath(surveyFileName);
         quadui.setLinkPath(" ");
         quadui.setOverlayPath(fieldFileName);
@@ -42,27 +42,27 @@ public class App {
         c.addTestRunner(quadui);
         // DSSAT
         ExeRunner dssat = new ExeRunner(dssatExePath, dssatWorkDir, "");
-        dssat.setOptions("b", dssatBatchFileName);
+        dssat.setArguments("b", dssatBatchFileName);
         c.addTestRunner(dssat);
         // ACMO for DSSAT
         JarRunner acmoDssat = new JarRunner(acmouiPath);
-        acmoDssat.setOptions("-cli", "-dssat", acmoDssatInputDir);
+        acmoDssat.setArguments("-cli", "-dssat", acmoDssatInputDir);
         c.addTestRunner(acmoDssat);
         // Open ACMO DSSAT CSV
         ExeRunner csvDssat = new ExeRunner("cmd");
-        csvDssat.setOptions("/c", "start", "\"\"", acmoDssatCsvFilePath);
+        csvDssat.setArguments("/c", "start", "\"\"", acmoDssatCsvFilePath);
         c.addTestRunner(csvDssat);
         // APSIM
         ApsimRunner apsim = new ApsimRunner(apsimExePath, apsimWorkDir, "");
-        apsim.setOptions("AgMip.apsim");
+        apsim.setArguments("AgMip.apsim");
         c.addTestRunner(apsim);
         // ACMO for APSIM
         JarRunner acmoApsim = new JarRunner(acmouiPath);
-        acmoApsim.setOptions("-cli", "-apsim", acmoApsimInputDir);
+        acmoApsim.setArguments("-cli", "-apsim", acmoApsimInputDir);
         c.addTestRunner(acmoApsim);
         // Open ACMO APSIM CSV
         ExeRunner csvApsim = new ExeRunner("cmd");
-        csvApsim.setOptions("/c", "start", "\"\"", acmoApsimCsvFilePath);
+        csvApsim.setArguments("/c", "start", "\"\"", acmoApsimCsvFilePath);
         c.addTestRunner(csvApsim);
 
         c.run();
