@@ -75,14 +75,14 @@ public abstract class TestRunner {
             this.arguments.addAll(arguments);
         }
     }
-    
+
     public ArrayList<String> getArguments() {
         return this.arguments;
     }
 
     protected ArrayList<String> getProcessArguments() {
         ArrayList<String> argsList = new ArrayList();
-        argsList.add(getTitle());
+        argsList.add(executablePath.getPath());
         if (arguments != null) {
             argsList.addAll(arguments);
         }
@@ -107,5 +107,5 @@ public abstract class TestRunner {
         }
     }
 
-    public abstract void run() throws IOException;
+    public abstract boolean run() throws IOException;
 }

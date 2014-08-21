@@ -12,6 +12,19 @@
                     "overlayPath":"Field_Overlay.zip",
                     "seasonalPath":"Seasonal_strategy.zip"
                 }
+        },
+        {
+            "title":"DSSAT45",
+            "runner_type":"exe",
+            "executable_path":"C:\\DSSAT45\\dscsm045.exe",
+            "work_dir":"*QuadUI.output_dir\\DSSAT",
+            "arguments":["b", "dssbatch.v45"]
+        },
+        {
+            "title":"ACMOUI",
+            "runner_type":"jar",
+            "executable_path":"*QuadUI.output_dir\\..\\acmoui-1.2-SNAPSHOT-beta6.jar",
+            "arguments":["-cli", "-dssat", "*DSSAT45.work_dir"]
         }
     ]
 }

@@ -21,14 +21,17 @@ public class ExeRunner extends TestRunner {
     }
 
     @Override
-    public void run() throws IOException {
+    public boolean run() throws IOException {
         LOG.info("Run {}...", getTitle());
         Process p = getProcess();
         printSubProcessLog(p, LOG);
         try {
-            LOG.info("{} ends with code [{}]", getTitle(), p.waitFor());
+            int ret = p.waitFor();
+            LOG.info("{} ends with code [{}]", getTitle(), ret);
+            return ret == 0;
         } catch (InterruptedException ex) {
             LOG.error("{} got error: [{}]", getTitle(), ex.getMessage());
+            return false;
         }
     }
 }

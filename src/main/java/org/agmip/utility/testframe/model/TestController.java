@@ -43,7 +43,7 @@ public class TestController {
         runners.add(runner);
     }
 
-    public void readDefJson(File testFlowDefJson) {
+    public void readDefJson(File testFlowDefJson) throws Exception {
         this.runners.clear();
         HashMap def;
         try {
@@ -53,12 +53,15 @@ public class TestController {
             return;
         }
         ArrayList<HashMap> runnerDefs = MapUtil.getObjectOr(def, "test_apps", new ArrayList<HashMap>());
-        for (HashMap runnerDef : runnerDefs) {
+        HashMap<String, Integer> runnerIds = new HashMap();
+        for (int i = 0; i < runnerDefs.size(); i++) {
+            // Initial test runner
+            HashMap runnerDef = runnerDefs.get(i);
             TestRunner runner;
             String runnerType = MapUtil.getValueOr(runnerDef, "runner_type", "");
-            String executablePath = MapUtil.getValueOr(runnerDef, "executable_path", "");
-            String workDir = MapUtil.getValueOr(runnerDef, "work_dir", "");
-            String outputDir = MapUtil.getValueOr(runnerDef, "output_dir", "");
+            String executablePath = getRelativePath(runnerDef, "executable_path", "", runnerIds);
+            String workDir = getRelativePath(runnerDef, "work_dir", "", runnerIds);
+            String outputDir = getRelativePath(runnerDef, "output_dir", "", runnerIds);
             if (runnerType.equals("quadui")) {
                 runner = new QuadUIJarRunner(executablePath, workDir, outputDir);
             } else if (executablePath.toLowerCase().endsWith(".jar")) {
@@ -66,11 +69,27 @@ public class TestController {
             } else {
                 runner = new ExeRunner(executablePath, workDir, outputDir);
             }
-            runner.setArguments(MapUtil.getObjectOr(runnerDef, "arguments", new ArrayList()));
+            // Register the title
+            String title = MapUtil.getValueOr(runnerDef, "title", "");
+            if (!title.equals("")) {
+                runner.setTitle(title);
+            } else {
+                title = runner.getTitle();
+            }
+            runnerIds.put(title, i);
+            // Set regular arguments
+            ArrayList<String> args = new ArrayList();
+            ArrayList<String> preArgs = MapUtil.getObjectOr(runnerDef, "arguments", new ArrayList<String>());
+            for (String arg : preArgs) {
+                args.add(getRelativePath(arg, runnerIds));
+            }
+            runner.setArguments(args);
+            preArgs.clear();
+            // Set app-specific arguments
             HashMap<String, String> spcOpts = MapUtil.getObjectOr(runnerDef, "specific_arguments", new HashMap());
             for (Entry<String, String> e : spcOpts.entrySet()) {
                 String optName = e.getKey();
-                String optValue = e.getValue();
+                String optValue = getRelativePath(e.getValue(), runnerIds);
                 String methodName = "set" + optName.substring(0, 1).toUpperCase() + optName.substring(1);
                 try {
                     Method m = runner.getClass().getMethod(methodName, String.class);
@@ -96,7 +115,10 @@ public class TestController {
 
     public void run() throws IOException {
         for (TestRunner runner : runners) {
-            runner.run();
+            if (!runner.run()) {
+                LOG.info("Error detected, test is terminated!");
+                return;
+            }
         }
         LOG.info("All tests finished!");
     }
@@ -113,6 +135,49 @@ public class TestController {
         } catch (IOException ex) {
             LOG.error(ex.getMessage());
             return "";
+        }
+    }
+    
+    private String getRelativePath(HashMap runnerDef, String id, String defVal, HashMap<String, Integer> runnerIds) throws Exception {
+        return getRelativePath(MapUtil.getValueOr(runnerDef, id, defVal), runnerIds);
+    }
+    
+    private String getRelativePath(String path, HashMap<String, Integer> runnerIds) throws Exception {
+        if (path.startsWith("-") || !path.contains("*")) {
+            return path;
+        } else if (!path.matches(".*\\*\\w+\\..+")) {
+            throw new Exception("Invalid format for relative path : [" + path + "]");
+        } else {
+            int startIdx = path.indexOf("*");
+            String rltPath = path.substring(startIdx + 1);
+            String rltTitle = rltPath.substring(0, rltPath.indexOf("."));
+            int endIdx = rltPath.indexOf(File.separator);
+            if (endIdx == -1) {
+                endIdx = rltPath.length();
+            }
+            String rltVar = rltPath.substring(rltPath.indexOf(".") + 1, endIdx);
+            endIdx += startIdx + 1;
+            if (!runnerIds.containsKey(rltTitle)) {
+                throw new Exception("Invalid format for relative path : [" + path + "]");
+            } else {
+                TestRunner r = this.runners.get(runnerIds.get(rltTitle));
+                String rltVal;
+                if (rltVar.equalsIgnoreCase("work_dir")) {
+                    rltVal = r.getWorkDir().getPath();
+                } else if (rltVar.equalsIgnoreCase("output_dir")) {
+                    
+                    if (r.getOutputDir().isAbsolute()) {
+                        rltVal = r.getOutputDir().getPath();
+                    } else {
+                        rltVal = r.getWorkDir().getPath() + File.separator + r.getOutputDir().getPath();
+                    }
+                } else {
+                    throw new Exception("Invalid format for relative path : [" + path + "]");
+                }
+                path = path.substring(0, startIdx) + rltVal + path.substring(endIdx);
+            }
+            
+            return path;
         }
     }
 }
