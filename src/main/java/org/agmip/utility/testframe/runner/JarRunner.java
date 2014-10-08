@@ -2,6 +2,7 @@ package org.agmip.utility.testframe.runner;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,16 +11,18 @@ import org.slf4j.LoggerFactory;
  *
  * @author Meng Zhang
  */
-public class JarRunner extends TestRunner {
+public class JarRunner extends AppRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(JarRunner.class);
 
     public JarRunner(String executablePath, String workDir, String outputDir) {
         super(executablePath, workDir, outputDir);
+        runnerType = Type.JAR;
     }
 
     public JarRunner(String executablePath) {
         super(executablePath);
+        runnerType = Type.JAR;
     }
 
     @Override
@@ -32,17 +35,7 @@ public class JarRunner extends TestRunner {
     }
 
     @Override
-    public final boolean run() throws IOException {
-        LOG.info("Run {}...", getTitle());
-        Process p = getProcess();
-        printSubProcessLog(p, LOG);
-        try {
-            int ret = p.waitFor();
-            LOG.info("{} ends with code [{}]", getTitle(), ret);
-            return ret == 0;
-        } catch (InterruptedException ex) {
-            LOG.error("{} got error: [{}]", getTitle(), ex.getMessage());
-            return false;
-        }
+    public void handleOutput() {
+        // TODO
     }
 }

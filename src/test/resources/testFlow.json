@@ -2,7 +2,7 @@
         {
             "title":"QuadUI",
             "runner_type":"quadui",
-            "executable_path":"D:\\workData\\test_data2\\testFrame\\quadui-1.2.1-SNAPSHOT-Beta24-hf1.jar",
+            "executable_path":"D:\\workData\\test_data2\\testFrame\\quadui-1.2.1-SNAPSHOT-Beta28.jar",
             "work_dir":"D:\\workData\\test_data2\\Machakos_Nepal_play",
             "output_dir":"..\\testFrame\\output",
             "arguments":["-cli", "-s", "-DAJ"],
@@ -21,10 +21,20 @@
             "arguments":["b", "dssbatch.v45"]
         },
         {
-            "title":"ACMOUI",
+            "title":"ACMOUI_DSSAT",
             "runner_type":"jar",
-            "executable_path":"*QuadUI.output_dir\\..\\acmoui-1.2-SNAPSHOT-beta6.jar",
+            "executable_path":"*QuadUI.output_dir\\..\\acmoui-1.2-SNAPSHOT-beta7.jar",
+            "output_dir":"*DSSAT45.work_dir",
             "arguments":["-cli", "-dssat", "*DSSAT45.work_dir"]
+        }
+    ],
+    "comparators":[
+        {
+            "title":"ACMO_comparator",
+            "compare_type":"file",
+            "expected":"D:\\SSD_USER\\Documents\\NetBeansProjects\\Develop\\atui\\data\\Machakos\\expeceted\\DSSAT45_ACMO\\ACMO-MACHAKOS-1-0XFX-0-0-DSSAT.csv",
+            "actual":"*ACMOUI_DSSAT.output_dir\\ACMO-MACHAKOS-1-0XFX-0-0-DSSAT.csv",
+            "output_dir":"..\\testFrame\\result"
         }
     ]
 }

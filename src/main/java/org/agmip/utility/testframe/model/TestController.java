@@ -11,10 +11,8 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import org.agmip.util.JSONAdapter;
 import org.agmip.util.MapUtil;
-import org.agmip.utility.testframe.runner.ExeRunner;
-import org.agmip.utility.testframe.runner.JarRunner;
-import org.agmip.utility.testframe.runner.QuadUIJarRunner;
-import org.agmip.utility.testframe.runner.TestRunner;
+import org.agmip.utility.testframe.comparator.TestComparator;
+import org.agmip.utility.testframe.runner.AppRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,50 +23,67 @@ import org.slf4j.LoggerFactory;
 public class TestController {
 
     private static final Logger LOG = LoggerFactory.getLogger(TestController.class);
-    protected ArrayList<TestRunner> runners;
+    protected ArrayList<AppRunner> runners;
+    protected ArrayList<TestComparator> comparators;
 
     public TestController() {
         runners = new ArrayList();
+        comparators = new ArrayList();
     }
 
-    public TestController(ArrayList<TestRunner> runners) {
-        if (runners != null) {
-            this.runners = runners;
-        } else {
-            this.runners = new ArrayList();
-        }
-    }
+//    public TestController(ArrayList<TestRunner> runners) {
+//        if (runners != null) {
+//            this.runners = runners;
+//        } else {
+//            this.runners = new ArrayList();
+//        }
+//    }
 
-    public void addTestRunner(TestRunner runner) {
+    @Deprecated
+    public void addAppRunner(AppRunner runner) {
         runners.add(runner);
     }
-
+    
     public void readDefJson(File testFlowDefJson) throws Exception {
-        this.runners.clear();
+        readDefJsonStr(readJsonFile(testFlowDefJson));
+    }
+
+    public void readDefJsonStr(String testFlowDefJson) throws Exception {
         HashMap def;
         try {
-            def = JSONAdapter.fromJSON(readJsonFile(testFlowDefJson));
+            def = JSONAdapter.fromJSON(testFlowDefJson);
         } catch (IOException ex) {
             LOG.error(ex.getMessage());
             return;
         }
+        readDefMap(def);
+    }
+
+    public void readDefMap(HashMap def) throws Exception {
+        this.runners.clear();
+        this.comparators.clear();
+        // Read Test Runner Definitions
         ArrayList<HashMap> runnerDefs = MapUtil.getObjectOr(def, "test_apps", new ArrayList<HashMap>());
+        ArrayList<HashMap> comparatorDefs = MapUtil.getObjectOr(def, "comparators", new ArrayList<HashMap>());
         HashMap<String, Integer> runnerIds = new HashMap();
         for (int i = 0; i < runnerDefs.size(); i++) {
             // Initial test runner
             HashMap runnerDef = runnerDefs.get(i);
-            TestRunner runner;
             String runnerType = MapUtil.getValueOr(runnerDef, "runner_type", "");
             String executablePath = getRelativePath(runnerDef, "executable_path", "", runnerIds);
             String workDir = getRelativePath(runnerDef, "work_dir", "", runnerIds);
             String outputDir = getRelativePath(runnerDef, "output_dir", "", runnerIds);
-            if (runnerType.equals("quadui")) {
-                runner = new QuadUIJarRunner(executablePath, workDir, outputDir);
-            } else if (executablePath.toLowerCase().endsWith(".jar")) {
-                runner = new JarRunner(executablePath, workDir, outputDir);
-            } else {
-                runner = new ExeRunner(executablePath, workDir, outputDir);
-            }
+            AppRunner.Type type = AppRunner.Type.valueOf(runnerType.toUpperCase());
+            AppRunner runner = TestDefBuilder.buildAppRunner(type, executablePath, workDir, outputDir);
+//            if (type.equals(TestRunner.Type.QUADUI)) {
+//                runner = new QuadUIJarRunner(executablePath, workDir, outputDir);
+//            } else if (runnerType.equals(TestRunner.Type.JAR.toString()) || executablePath.toLowerCase().endsWith(".jar")) {
+//                runner = new JarRunner(executablePath, workDir, outputDir);
+//            } else if (runnerType.equals(TestRunner.Type.APSIM.toString())) {
+//                runner = new ApsimRunner(executablePath, workDir, outputDir);
+//            } else {
+//                runner = new ExeRunner(executablePath, workDir, outputDir);
+//            }
             // Register the title
             String title = MapUtil.getValueOr(runnerDef, "title", "");
             if (!title.equals("")) {
@@ -111,16 +126,43 @@ public class TestController {
             }
             this.runners.add(runner);
         }
+        // Read Comparator Definitions
+        for (HashMap comparatorDef : comparatorDefs) {
+            String compareType = MapUtil.getValueOr(comparatorDef, "compare_type", "");
+            String expectedPath = MapUtil.getValueOr(comparatorDef, "expected", "");
+            String actualPath = getRelativePath(comparatorDef, "actual", "", runnerIds);
+            TestComparator.Type type = TestComparator.Type.valueOf(compareType.toUpperCase());
+            TestComparator comparator = TestDefBuilder.buildTestComparator(type, expectedPath, actualPath);
+            // Register the title
+            String title = MapUtil.getValueOr(comparatorDef, "title", "");
+            String outputDir = getRelativePath(comparatorDef, "output_dir", "", runnerIds);
+            comparator.setTitle(title);
+            comparator.setOutputDir(outputDir);
+            comparators.add(comparator);
+        }
     }
 
-    public void run() throws IOException {
-        for (TestRunner runner : runners) {
-            if (!runner.run()) {
+    public void run() throws Exception {
+        for (AppRunner runner : runners) {
+            if (runner.run() != 0) {
                 LOG.info("Error detected, test is terminated!");
                 return;
+            } else {
             }
         }
         LOG.info("All tests finished!");
+        LOG.info("Start compare simulation results...");
+        for (TestComparator comparator : comparators) {
+            if (comparator.compare()) {
+                LOG.info("Test result match with expected result for [{}]", comparator.getTitle());
+            } else {
+                handleCompareResult(comparator);
+            }
+        }
+    }
+    
+    public ArrayList<TestComparator> getComparators() {
+        return this.comparators;
     }
 
     private String readJsonFile(File f) {
@@ -137,11 +179,11 @@ public class TestController {
             return "";
         }
     }
-    
+
     private String getRelativePath(HashMap runnerDef, String id, String defVal, HashMap<String, Integer> runnerIds) throws Exception {
         return getRelativePath(MapUtil.getValueOr(runnerDef, id, defVal), runnerIds);
     }
-    
+
     private String getRelativePath(String path, HashMap<String, Integer> runnerIds) throws Exception {
         if (path.startsWith("-") || !path.contains("*")) {
             return path;
@@ -160,12 +202,12 @@ public class TestController {
             if (!runnerIds.containsKey(rltTitle)) {
                 throw new Exception("Invalid format for relative path : [" + path + "]");
             } else {
-                TestRunner r = this.runners.get(runnerIds.get(rltTitle));
+                AppRunner r = this.runners.get(runnerIds.get(rltTitle));
                 String rltVal;
                 if (rltVar.equalsIgnoreCase("work_dir")) {
                     rltVal = r.getWorkDir().getPath();
                 } else if (rltVar.equalsIgnoreCase("output_dir")) {
-                    
+
                     if (r.getOutputDir().isAbsolute()) {
                         rltVal = r.getOutputDir().getPath();
                     } else {
@@ -176,8 +218,21 @@ public class TestController {
                 }
                 path = path.substring(0, startIdx) + rltVal + path.substring(endIdx);
             }
-            
+
             return path;
         }
+    }
+
+    private void handleCompareResult(TestComparator comparator) {
+        LOG.info("Test result not match with expected result for {}", comparator.getTitle());
+        HashMap result = comparator.getDiff();
+        for (Object fileName : result.keySet()) {
+            System.out.println("*** Difference for " + fileName + " file ***");
+            ArrayList<String> diffs = (ArrayList<String>) result.get(fileName);
+            for (String diff : diffs) {
+                System.out.println(diff);
+            }
+        }
+
     }
 }

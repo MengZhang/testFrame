@@ -1,0 +1,2378 @@
+*WARNING DETAIL FILE
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:49
+                                                                                
+*RUN   1        : MACH0001_1                         MACH0001    1              
+                                                                                
+ EXPERIMENT     : MACH0001 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0001_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999  75
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999  75
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999  75
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  17.5   9.0  0.80                                                 
+     2    15  17.5   9.0  0.80                                                 
+     3    30  17.5   9.0  0.80                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999  75
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:49
+                                                                                
+*RUN   2        : MACH0002_1                         MACH0002    1              
+                                                                                
+ EXPERIMENT     : MACH0002 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0002_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999 255
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  17.5   9.0  0.80                                                 
+     2    15  17.5   9.0  0.80                                                 
+     3    30  17.5   9.0  0.80                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:49
+                                                                                
+*RUN   3        : MACH0003_1                         MACH0003    1              
+                                                                                
+ EXPERIMENT     : MACH0003 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0003_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999  15
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999  15
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999  15
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.50                                                 
+     2    15  22.5   9.0  0.50                                                 
+     3    30  22.5   9.0  0.50                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999  15
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:49
+                                                                                
+*RUN   4        : MACH0004_1                         MACH0004    1              
+                                                                                
+ EXPERIMENT     : MACH0004 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0004_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999 255
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.50                                                 
+     2    15  22.5   9.0  0.50                                                 
+     3    30  22.5   9.0  0.50                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:49
+                                                                                
+*RUN   5        : MACH0006_1                         MACH0006    1              
+                                                                                
+ EXPERIMENT     : MACH0006 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0006_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999 285
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999 285
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1999 285
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN   6        : MACH0007_1                         MACH0007    1              
+                                                                                
+ EXPERIMENT     : MACH0007 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0007_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 2000  75
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 2000  75
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 2000  75
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.80                                                 
+     2    15  22.5   9.0  0.80                                                 
+     3    30  22.5   9.0  0.80                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 2000  75
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN   7        : MACH0012_1                         MACH0012    1              
+                                                                                
+ EXPERIMENT     : MACH0012 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0012_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999 195
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999 195
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999 195
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.70                                                 
+     2    15  22.5   9.0  0.70                                                 
+     3    30  22.5   9.0  0.70                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999 195
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN   8        : MACH0013_1                         MACH0013    1              
+                                                                                
+ EXPERIMENT     : MACH0013 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0013_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999 195
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999 195
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999 195
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.70                                                 
+     2    15  22.5   9.0  0.70                                                 
+     3    30  22.5   9.0  0.70                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999 195
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN   9        : MACH0014_1                         MACH0014    1              
+                                                                                
+ EXPERIMENT     : MACH0014 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0014_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999 195
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999 195
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999 195
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.70                                                 
+     2    15  22.5   9.0  0.70                                                 
+     3    30  22.5   9.0  0.70                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999 195
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  10        : MACH0019_1                         MACH0019    1              
+                                                                                
+ EXPERIMENT     : MACH0019 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0019_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 2000  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 2000  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 2000  45
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.60                                                 
+     2    15  22.5   9.0  0.60                                                 
+     3    30  22.5   9.0  0.60                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 2000  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  11        : MACH0020_1                         MACH0020    1              
+                                                                                
+ EXPERIMENT     : MACH0020 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0020_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 2000  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 2000  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 2000  45
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  22.5   9.0  0.60                                                 
+     2    15  22.5   9.0  0.60                                                 
+     3    30  22.5   9.0  0.60                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 2000  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  12        : MACH0023_1                         MACH0023    1              
+                                                                                
+ EXPERIMENT     : MACH0023 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0023_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 2000  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 2000  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 2000  45
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  17.5   9.0  0.60                                                 
+     2    15  17.5   9.0  0.60                                                 
+     3    30  17.5   9.0  0.60                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 2000  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  13        : MACH0029_1                         MACH0029    1              
+                                                                                
+ EXPERIMENT     : MACH0029 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0029_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 2000  75
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 2000  75
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 2000  75
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  17.5   9.0  0.60                                                 
+     2    15  17.5   9.0  0.60                                                 
+     3    30  17.5   9.0  0.60                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 2000  75
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  14        : MACH0030_1                         MACH0030    1              
+                                                                                
+ EXPERIMENT     : MACH0030 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0030_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 2000  75
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 2000  75
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 2000  75
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  17.5   9.0  0.60                                                 
+     2    15  17.5   9.0  0.60                                                 
+     3    30  17.5   9.0  0.60                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 2000  75
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  15        : MACH0035_1                         MACH0035    1              
+                                                                                
+ EXPERIMENT     : MACH0035 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0035_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1997  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1997  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1997  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  16        : MACH0036_1                         MACH0036    1              
+                                                                                
+ EXPERIMENT     : MACH0036 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0036_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1997  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1997  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1997  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  17        : MACH0038_1                         MACH0038    1              
+                                                                                
+ EXPERIMENT     : MACH0038 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0038_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1997  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1997  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1997  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  18        : MACH0040_1                         MACH0040    1              
+                                                                                
+ EXPERIMENT     : MACH0040 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0040_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1997  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1997  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1997  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  19        : MACH0042_1                         MACH0042    1              
+                                                                                
+ EXPERIMENT     : MACH0042 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0042_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1997  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1997  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1997  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  20        : MACH0044_1                         MACH0044    1              
+                                                                                
+ EXPERIMENT     : MACH0044 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0044_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  21        : MACH0045_1                         MACH0045    1              
+                                                                                
+ EXPERIMENT     : MACH0045 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0045_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  22        : MACH0046_1                         MACH0046    1              
+                                                                                
+ EXPERIMENT     : MACH0046 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0046_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  23        : MACH0049_1                         MACH0049    1              
+                                                                                
+ EXPERIMENT     : MACH0049 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0049_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  24        : MACH0050_1                         MACH0050    1              
+                                                                                
+ EXPERIMENT     : MACH0050 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0050_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZPHEN  YEAR DOY = 1998 306
+ Crop failure because of lack of germination within 15 days of sowing          
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  25        : MACH0052_1                         MACH0052    1              
+                                                                                
+ EXPERIMENT     : MACH0052 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0052_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  26        : MACH0054_1                         MACH0054    1              
+                                                                                
+ EXPERIMENT     : MACH0054 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0054_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZPHEN  YEAR DOY = 1998 306
+ Crop failure because of lack of germination within 15 days of sowing          
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  27        : MACH0056_1                         MACH0056    1              
+                                                                                
+ EXPERIMENT     : MACH0056 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0056_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1998  45
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  35.0   9.0  0.90                                                 
+     2    15  35.0   9.0  0.90                                                 
+     3    30  35.0   9.0  0.90                                                 
+     4    40  25.0  15.0  0.67 (estimated)                                     
+     5    50  25.0  15.0  0.67 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZ_GRO  YEAR DOY = 1998 207
+   Crop mature on JD 207 due to slowed grain filling                           
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:50
+                                                                                
+*RUN  28        : MACH0057_1                         MACH0057    1              
+                                                                                
+ EXPERIMENT     : MACH0057 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0057_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1998  45
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  35.0   9.0  0.90                                                 
+     2    15  35.0   9.0  0.90                                                 
+     3    30  35.0   9.0  0.90                                                 
+     4    40  25.0  15.0  0.67 (estimated)                                     
+     5    50  25.0  15.0  0.67 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZ_GRO  YEAR DOY = 1998 191
+   Crop mature on JD 191 due to slowed grain filling                           
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  29        : MACH0058_1                         MACH0058    1              
+                                                                                
+ EXPERIMENT     : MACH0058 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0058_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1998 255
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  35.0   9.0  0.90                                                 
+     2    15  35.0   9.0  0.90                                                 
+     3    30  35.0   9.0  0.90                                                 
+     4    40  25.0  15.0  0.67 (estimated)                                     
+     5    50  25.0  15.0  0.67 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1998 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZPHEN  YEAR DOY = 1998 306
+ Crop failure because of lack of germination within 15 days of sowing          
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  30        : MACH0060_1                         MACH0060    1              
+                                                                                
+ EXPERIMENT     : MACH0060 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0060_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1998  45
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  35.0   9.0  0.90                                                 
+     2    15  35.0   9.0  0.90                                                 
+     3    30  35.0   9.0  0.90                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  31        : MACH0062_1                         MACH0062    1              
+                                                                                
+ EXPERIMENT     : MACH0062 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0062_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  32        : MACH0063_1                         MACH0063    1              
+                                                                                
+ EXPERIMENT     : MACH0063 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0063_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  33        : MACH0066_1                         MACH0066    1              
+                                                                                
+ EXPERIMENT     : MACH0066 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0066_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1998 255
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  35.0   9.0  0.90                                                 
+     2    15  35.0   9.0  0.90                                                 
+     3    30  35.0   9.0  0.90                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1998 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  34        : MACH0068_1                         MACH0068    1              
+                                                                                
+ EXPERIMENT     : MACH0068 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0068_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1998 255
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  35.0   9.0  0.90                                                 
+     2    15  35.0   9.0  0.90                                                 
+     3    30  35.0   9.0  0.90                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1998 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  35        : MACH0069_1                         MACH0069    1              
+                                                                                
+ EXPERIMENT     : MACH0069 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0069_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  36        : MACH0070_1                         MACH0070    1              
+                                                                                
+ EXPERIMENT     : MACH0070 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0070_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  37        : MACH0072_1                         MACH0072    1              
+                                                                                
+ EXPERIMENT     : MACH0072 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0072_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  38        : MACH0073_1                         MACH0073    1              
+                                                                                
+ EXPERIMENT     : MACH0073 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0073_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  39        : MACH0075_1                         MACH0075    1              
+                                                                                
+ EXPERIMENT     : MACH0075 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0075_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  40        : MACH0078_1                         MACH0078    1              
+                                                                                
+ EXPERIMENT     : MACH0078 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0078_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  41        : MACH0081_1                         MACH0081    1              
+                                                                                
+ EXPERIMENT     : MACH0081 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0081_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1998  45
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  35.0   9.0  0.90                                                 
+     2    15  35.0   9.0  0.90                                                 
+     3    30  35.0   9.0  0.90                                                 
+     4    40  25.0  15.0  0.67 (estimated)                                     
+     5    50  25.0  15.0  0.67 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZ_GRO  YEAR DOY = 1998 191
+   Crop mature on JD 191 due to slowed grain filling                           
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  42        : MACH0086_1                         MACH0086    1              
+                                                                                
+ EXPERIMENT     : MACH0086 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0086_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  43        : MACH0088_1                         MACH0088    1              
+                                                                                
+ EXPERIMENT     : MACH0088 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0088_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998  45
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998  45
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998  45
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  44        : MACH0090_1                         MACH0090    1              
+                                                                                
+ EXPERIMENT     : MACH0090 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0090_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZPHEN  YEAR DOY = 1998 306
+ Crop failure because of lack of germination within 15 days of sowing          
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  45        : MACH0092_1                         MACH0092    1              
+                                                                                
+ EXPERIMENT     : MACH0092 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0092_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1998 255
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1998 255
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILNI  YEAR DOY = 1998 255
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+ MZPHEN  YEAR DOY = 1998 306
+ Crop failure because of lack of germination within 15 days of sowing          
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:51
+                                                                                
+*RUN  46        : MACH0255_1                         MACH0255    1              
+                                                                                
+ EXPERIMENT     : MACH0255 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0255_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999  75
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999  75
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999  75
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  27.5   9.0  0.90                                                 
+     2    15  27.5   9.0  0.90                                                 
+     3    30  27.5   9.0  0.90                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999  75
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       
+
+******************************************************************************
+
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         AUG 09, 2014; 00:37:52
+                                                                                
+*RUN  47        : MACH0256_1                         MACH0256    1              
+                                                                                
+ EXPERIMENT     : MACH0256 MZ                                                   
+ DATA PATH      :                                                               
+ TREATMENT  1   : MACH0256_1                                                    
+  
+
+ IPEXP   YEAR DOY =    0   0
+ Photosynthesis method (PHOTO in FILEX) has been changed                       
+ from "L" to "C" for compatibility with crop model, MZCER.                     
+
+ IPRES   YEAR DOY =    0   0
+ Residue application   1                                                       
+ Applied residues will be incorporated to a depth of  15.0 cm.                 
+
+ IPSOIL  YEAR DOY =    0   0
+ Invalid value for SLNF in soil file.                                          
+ Value changed to 1.0.                                                         
+
+ IPSOIL  YEAR DOY =    0   0
+ Saturated hydraulic conductivity equal to zero for one or more soil layers.   
+ Data will be treated as missing.                                              
+
+ SOILDYN  YEAR DOY = 1999  75
+ Soil photosynthesis factor (SLPF) = 0.92                                      
+
+ SOILDYN  YEAR DOY = 1999  75
+ Stage 1 soil evaporation limit has been set to   6.0.                         
+
+ SOILDYN  YEAR DOY = 1999  75
+ Organic C data in one or more soil layers are zero or missing.                
+ A minimum value of OC in this layer  will be estimated using soil texture.    
+       Depth  Clay  Silt    OC                                                 
+ Layer  (cm)   (%)   (%)   (%)                                                 
+     1     5  27.5   9.0  0.90                                                 
+     2    15  27.5   9.0  0.90                                                 
+     3    30  27.5   9.0  0.90                                                 
+     4    40  53.0  15.0  1.09 (estimated)                                     
+     5    50  55.0  17.0  1.15 (estimated)                                     
+     6    61  55.0  17.0  1.15 (estimated)                                     
+     7    71  55.0  17.0  1.15 (estimated)                                     
+     8    82  55.0  17.0  1.15 (estimated)                                     
+     9   111  51.0  22.0  1.16 (estimated)                                     
+    10   140  51.0  22.0  1.16 (estimated)                                     
+
+ SOILNI  YEAR DOY = 1999  75
+ N content of residue was changed from value in initial conditions             
+   section of experiment file to maintain allowable C:N ratio.                 
+   - Previous crop code                 :    MZ                                
+   - Recommended N content for surface residue (%):   1.1                      
+   - Value read from file               : 0.800%                               
+   - Value changed to                   : 0.880%                               
+ To change allowable N content, modify SCN parameter                           
+   in RESCH045.SDA file.                                                       

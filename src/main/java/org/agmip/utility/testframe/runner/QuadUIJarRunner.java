@@ -2,6 +2,7 @@ package org.agmip.utility.testframe.runner;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -21,10 +22,12 @@ public class QuadUIJarRunner extends JarRunner {
 
     public QuadUIJarRunner(String executablePath, String workDir, String outputDir) {
         super(executablePath, workDir, outputDir);
+        runnerType = Type.QUADUI;
     }
 
     public QuadUIJarRunner(String executablePath) {
-        this(executablePath, "", "");
+        super(executablePath);
+        runnerType = Type.QUADUI;
     }
 
     public void setRawdataPath(String rawdataPath) {
@@ -60,12 +63,24 @@ public class QuadUIJarRunner extends JarRunner {
     public ArrayList<String> getProcessArguments() {
         ArrayList<String> argsList = new ArrayList();
         argsList.addAll(super.getProcessArguments());
-        argsList.remove(argsList.size() - 1);
+//        argsList.remove(argsList.size() - 1);
         argsList.add(rawdataPath.getPath());
         argsList.add(linkPath.getPath());
         argsList.add(overlayPath.getPath());
         argsList.add(seasonalPath.getPath());
         argsList.add(outputDir.getPath());
         return argsList;
+    }
+    
+    @Override
+    public HashMap toMap() {
+        HashMap ret = super.toMap();
+        HashMap<String, String> specArgs = new HashMap();
+        specArgs.put("rawdataPath", rawdataPath.getPath());
+        specArgs.put("linkPath", linkPath.getPath());
+        specArgs.put("overlayPath", overlayPath.getPath());
+        specArgs.put("seasonalPath", seasonalPath.getPath());
+        ret.put("specific_arguments", specArgs);
+        return ret;
     }
 }

@@ -16,6 +16,7 @@ public class ApsimRunner extends ExeRunner {
 
     public ApsimRunner(String executablePath, String workDir, String outputDir) {
         super(executablePath, workDir, outputDir);
+        runnerType = Type.APSIM;
     }
 
     @Override
@@ -30,19 +31,19 @@ public class ApsimRunner extends ExeRunner {
             }
         }
     }
+    
+    @Override
+    public void handleOutput() {
+        // TODO
+    }
 
     @Override
-    public boolean run() throws IOException {
-        LOG.info("Run {}...", getTitle());
-        Process p = getProcess();
-        printSubProcessLog(p, LOG);
-        try {
-            int ret = p.waitFor();
-            LOG.info("{} ends with code [{}]", getTitle(), ret);
-            return ret == 0 || ret == 1;
-        } catch (InterruptedException ex) {
-            LOG.error("{} got error: [{}]", getTitle(), ex.getMessage());
-            return false;
+    public int run() throws IOException {
+        int ret = super.run();
+        if (ret == 1) {
+            return 0;
+        } else {
+            return ret;
         }
     }
 }

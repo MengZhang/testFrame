@@ -1,0 +1,56 @@
+$BATCH(MAIZE)
+!
+! Command Line : C:\DSSAT45\DSCS0M45.EXE B DSSBatch.v45
+! Crop         : Maize
+! Experiment   : MACH0001.MZX
+! ExpNo        : 47
+! Debug        : C:\DSSAT45\DSCSM045.EXE " B DSSBatch.v45"
+!
+@FILEX                                                                                        TRTNO     RP     SQ     OP     CO
+MACH0001.MZX                                                                                      1      1      1      1      0
+MACH0002.MZX                                                                                      1      1      1      1      0
+MACH0003.MZX                                                                                      1      1      1      1      0
+MACH0004.MZX                                                                                      1      1      1      1      0
+MACH0006.MZX                                                                                      1      1      1      1      0
+MACH0007.MZX                                                                                      1      1      1      1      0
+MACH0012.MZX                                                                                      1      1      1      1      0
+MACH0013.MZX                                                                                      1      1      1      1      0
+MACH0014.MZX                                                                                      1      1      1      1      0
+MACH0019.MZX                                                                                      1      1      1      1      0
+MACH0020.MZX                                                                                      1      1      1      1      0
+MACH0023.MZX                                                                                      1      1      1      1      0
+MACH0029.MZX                                                                                      1      1      1      1      0
+MACH0030.MZX                                                                                      1      1      1      1      0
+MACH0035.MZX                                                                                      1      1      1      1      0
+MACH0036.MZX                                                                                      1      1      1      1      0
+MACH0038.MZX                                                                                      1      1      1      1      0
+MACH0040.MZX                                                                                      1      1      1      1      0
+MACH0042.MZX                                                                                      1      1      1      1      0
+MACH0044.MZX                                                                                      1      1      1      1      0
+MACH0045.MZX                                                                                      1      1      1      1      0
+MACH0046.MZX                                                                                      1      1      1      1      0
+MACH0049.MZX                                                                                      1      1      1      1      0
+MACH0050.MZX                                                                                      1      1      1      1      0
+MACH0052.MZX                                                                                      1      1      1      1      0
+MACH0054.MZX                                                                                      1      1      1      1      0
+MACH0056.MZX                                                                                      1      1      1      1      0
+MACH0057.MZX                                                                                      1      1      1      1      0
+MACH0058.MZX                                                                                      1      1      1      1      0
+MACH0060.MZX                                                                                      1      1      1      1      0
+MACH0062.MZX                                                                                      1      1      1      1      0
+MACH0063.MZX                                                                                      1      1      1      1      0
+MACH0066.MZX                                                                                      1      1      1      1      0
+MACH0068.MZX                                                                                      1      1      1      1      0
+MACH0069.MZX                                                                                      1      1      1      1      0
+MACH0070.MZX                                                                                      1      1      1      1      0
+MACH0072.MZX                                                                                      1      1      1      1      0
+MACH0073.MZX                                                                                      1      1      1      1      0
+MACH0075.MZX                                                                                      1      1      1      1      0
+MACH0078.MZX                                                                                      1      1      1      1      0
+MACH0081.MZX                                                                                      1      1      1      1      0
+MACH0086.MZX                                                                                      1      1      1      1      0
+MACH0088.MZX                                                                                      1      1      1      1      0
+MACH0090.MZX                                                                                      1      1      1      1      0
+MACH0092.MZX                                                                                      1      1      1      1      0
+MACH0255.MZX                                                                                      1      1      1      1      0
+MACH0256.MZX                                                                                      1      1      1      1      0
