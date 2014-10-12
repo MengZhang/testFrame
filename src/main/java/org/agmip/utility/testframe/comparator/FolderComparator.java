@@ -3,6 +3,7 @@ package org.agmip.utility.testframe.comparator;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import org.agmip.util.MapUtil;
 
 /**
  *
@@ -25,18 +26,18 @@ public class FolderComparator extends TestComparator {
     }
 
     @Override
-    public HashMap<String, ArrayList<String>> getDiff() {
-        return this.diff;
+    public HashMap<String, ArrayList<Diff>> getDiffs() {
+        return this.diffs;
     }
 
-    public ArrayList<String> getDiff(String fileName) {
-        return this.diff.get(fileName);
+    public ArrayList<Diff> getDiff(String fileName) {
+        return MapUtil.getObjectOr(this.diffs, fileName, new ArrayList<Diff>());
     }
 
     @Override
     public boolean compare() throws Exception {
         // Initial the comparison
-        diff = new HashMap();
+        diffs = new HashMap();
         HashMap<String, File> expFiles = getSubFiles(this.expected);
         HashMap<String, File> actFiles = getSubFiles(this.actual);
 
@@ -47,19 +48,19 @@ public class FolderComparator extends TestComparator {
                 File actFile = actFiles.remove(fileName);
                 FileComparator comparator = FileComparatorFactory.getFileComparator(expFile, actFile);
                 if (!comparator.compare()) {
-                    addDiffMsgArr(fileName, comparator.getSingleDiff());
+                    addDiffMsgArr(fileName, comparator.getDiff());
                 }
             } else {
-                addDiffMsg(fileName, fileName + " is expected but missing in the result of current run.");
+                addDiffMsg(fileName, new MissingFileDiff(Diff.TYPE.DELETE, fileName, true));
             }
         }
 
         // Check if there is any file remained in the actual result directory
         for (String fileName : actFiles.keySet()) {
-            addDiffMsg(fileName, fileName + " is unexpected and existed in the result of current run .");
+            addDiffMsg(fileName, new MissingFileDiff(Diff.TYPE.INSERT, fileName, true));
         }
 
-        return diff.isEmpty();
+        return diffs.isEmpty();
     }
 
     protected HashMap<String, File> getSubFiles(File dir) {
@@ -70,21 +71,21 @@ public class FolderComparator extends TestComparator {
         return ret;
     }
 
-    protected void addDiffMsg(String fileName, String msg) {
-        ArrayList msgs = this.diff.get(fileName);
+    protected void addDiffMsg(String fileName, Diff diff) {
+        ArrayList<Diff> msgs = this.diffs.get(fileName);
         if (msgs == null) {
             msgs = new ArrayList();
-            this.diff.put(fileName, msgs);
+            this.diffs.put(fileName, msgs);
         }
-        msgs.add(msg);
+        msgs.add(diff);
     }
 
-    protected void addDiffMsgArr(String fileName, ArrayList<String> msgArr) {
-        ArrayList msgs = this.diff.get(fileName);
+    protected void addDiffMsgArr(String fileName, ArrayList<Diff> msgArr) {
+        ArrayList<Diff> msgs = this.diffs.get(fileName);
         if (msgs == null) {
-            msgs = new ArrayList();
-            this.diff.put(fileName, msgs);
+            this.diffs.put(fileName, msgArr);
+        } else {
+            msgs.addAll(msgArr);
         }
-        msgs.addAll(msgArr);
     }
 }

@@ -1,9 +1,11 @@
 package org.agmip.utility.testframe;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import org.agmip.utility.testframe.comparator.Diff;
 import org.agmip.utility.testframe.comparator.FileComparator;
 import org.agmip.utility.testframe.comparator.FileComparatorFactory;
 import org.agmip.utility.testframe.comparator.FolderComparator;
@@ -17,7 +19,7 @@ import org.junit.Ignore;
  * @author Meng Zhang
  */
 public class ComparatorTest {
-
+    
     URL expectedFile;
     URL actualFile;
     URL expectedDir;
@@ -46,8 +48,11 @@ public class ComparatorTest {
     public void testFileComparator() throws Exception {
         FileComparator c = FileComparatorFactory.getFileComparator(expectedFile.getPath(), actualFile.getPath());
         assertEquals(false, c.compare());
-        for (String diff : c.getSingleDiff()) {
-            System.out.println(diff);
+        for (Diff diff : c.getDiff()) {
+            System.out.println(diff.getHtmlString());
+        }
+        if (c.getDiff().isEmpty()) {
+            System.out.println(c.getTitle() + " : fully matched");
         }
     }
 
@@ -60,14 +65,19 @@ public class ComparatorTest {
 //    @Ignore
     public void testFolderomparator() throws Exception {
         FolderComparator c = new FolderComparator(expectedDir.getPath(), actualDir.getPath());
+        c.setTitle("FolderTest");
+        c.setOutputDir("");
         assertEquals(false, c.compare());
-        HashMap<String, ArrayList<String>> diffs = c.getDiff();
-        for (Map.Entry<String, ArrayList<String>> diff : diffs.entrySet()) {
+        HashMap<String, ArrayList<Diff>> diffs = c.getDiffs();
+        for (Map.Entry<String, ArrayList<Diff>> diff : diffs.entrySet()) {
             System.out.println(diff.getKey());
-            for (String change : diff.getValue()) {
+            for (Diff change : diff.getValue()) {
                 System.out.print("\t");
-                System.out.println(change);
+                System.out.println(change.getHtmlString());
             }
         }
+        File report = c.getReport();
+        System.out.println(report);
+        report.delete();
     }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>$title</title>
+        <style type="text/css">
+            .style1 {
+                margin-left: 40px;
+            }
+            .style2 {
+                border-style: solid;
+                border-width: 1px;
+            }
+            .style3 {
+                text-align: center;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="style3"><strong>$title Report</strong><br /><br />
+        </div>
+        <div class="style1" id="top">
+            #foreach ($differences in $diffs)
+            <li><a href="#$differences.key">$differences.key</a></li>
+            #end
+        </div>
+        <p>&nbsp;</p>
+        #foreach ($differences in $diffs)
+        <div class="style2" id="$differences.key">
+            <p><a href="#top">Back to top</a></p>
+            <p>
+                &nbsp; <strong>$differences.key</strong>
+                #foreach ($difference in $differences.value)
+                <p class="style1">$difference.htmlString</p>
+                #end
+            </p>
+            <p><a href="#top">Back to top</a></p>
+        </div>
+        #end
+    </body>
+</html>

@@ -1,6 +1,5 @@
 package org.agmip.utility.testframe.comparator;
 
-import difflib.Chunk;
 import difflib.Delta;
 import difflib.DiffUtils;
 import difflib.Patch;
@@ -12,6 +11,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import org.agmip.util.MapUtil;
 
 /**
  *
@@ -30,35 +30,48 @@ public class FileComparator extends TestComparator {
     }
 
     @Override
-    public HashMap<String, ArrayList<String>> getDiff() {
-        return this.diff;
+    public HashMap<String, ArrayList<Diff>> getDiffs() {
+        return this.diffs;
     }
     
-    public ArrayList<String> getSingleDiff() {
-        return this.diff.get(this.title);
+    public ArrayList<Diff> getDiff() {
+        return MapUtil.getObjectOr(this.diffs, expected.getName(), new ArrayList<Diff>());
     }
 
     @Override
     public boolean compare() throws Exception {
-        diff = new HashMap();
-        ArrayList<String> difference = new ArrayList();
+        diffs = new HashMap();
+        ArrayList<Diff> difference = new ArrayList();
         Patch patch = DiffUtils.diff(getFileContent(this.expected), getFileContent(this.actual));
         for (Delta delta : patch.getDeltas()) {
 
-            Chunk chunk;
+            Diff.TYPE type;
+            int lineNum;
+            List expLines = delta.getOriginal().getLines();
+            List actLines = delta.getRevised().getLines();
             if (delta.getType().equals(Delta.TYPE.CHANGE)) {
-                chunk = delta.getRevised();
+                lineNum = delta.getRevised().getPosition() + 1;
+                type = Diff.TYPE.CHANGE;
             } else if (delta.getType().equals(Delta.TYPE.DELETE)) {
-                chunk = delta.getOriginal();
+                lineNum = delta.getOriginal().getPosition() + 1;
+                type = Diff.TYPE.DELETE;
             } else {
-                chunk = delta.getRevised();
+                lineNum = delta.getRevised().getPosition() + 1;
+                type = Diff.TYPE.INSERT;
             }
-            List changes = chunk.getLines();
-            if (!changes.isEmpty()) {
-                difference.add(String.format("[%s][line %d][%s]", delta.getType().toString(), chunk.getPosition() + 1, changes.get(0).toString()));
+            if (!expLines.isEmpty() && (!actLines.isEmpty() || type.equals(Diff.TYPE.DELETE))) {
+//                TextFileDiff
+                difference.add(
+                        new TextFileDiff(type,
+                                lineNum,
+                                (String) expLines.get(0),
+                                (String) actLines.get(0))
+                );
             }
         }
-        diff.put(this.title, difference);
+        if (!difference.isEmpty()) {
+            diffs.put(expected.getName(), difference);
+        }
 
         return difference.isEmpty();
     }

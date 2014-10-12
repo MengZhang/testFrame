@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import org.agmip.util.JSONAdapter;
 import org.agmip.util.MapUtil;
+import org.agmip.utility.testframe.comparator.Diff;
 import org.agmip.utility.testframe.comparator.TestComparator;
 import org.agmip.utility.testframe.runner.AppRunner;
 import org.slf4j.Logger;
@@ -225,14 +226,14 @@ public class TestController {
 
     private void handleCompareResult(TestComparator comparator) {
         LOG.info("Test result not match with expected result for {}", comparator.getTitle());
-        HashMap result = comparator.getDiff();
-        for (Object fileName : result.keySet()) {
-            System.out.println("*** Difference for " + fileName + " file ***");
-            ArrayList<String> diffs = (ArrayList<String>) result.get(fileName);
-            for (String diff : diffs) {
-                System.out.println(diff);
-            }
-        }
+//        HashMap result = comparator.getDiffs();
+//        for (Object fileName : result.keySet()) {
+//            System.out.println("*** Difference for " + fileName + " file ***");
+//            ArrayList<Diff> diffs = (ArrayList<Diff>) result.get(fileName);
+//            for (Diff diff : diffs) {
+//                System.out.println(diff);
+//            }
+//        }
 
     }
 }
