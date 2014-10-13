@@ -33,7 +33,7 @@ public class FileComparator extends TestComparator {
     public HashMap<String, ArrayList<Diff>> getDiffs() {
         return this.diffs;
     }
-    
+
     public ArrayList<Diff> getDiff() {
         return MapUtil.getObjectOr(this.diffs, expected.getName(), new ArrayList<Diff>());
     }
@@ -42,47 +42,63 @@ public class FileComparator extends TestComparator {
     public boolean compare() throws Exception {
         diffs = new HashMap();
         ArrayList<Diff> difference = new ArrayList();
-        Patch patch = DiffUtils.diff(getFileContent(this.expected), getFileContent(this.actual));
-        for (Delta delta : patch.getDeltas()) {
+        try {
+            Patch patch = DiffUtils.diff(getFileContent(this.expected, false), getFileContent(this.actual, true));
+            for (Delta delta : patch.getDeltas()) {
 
-            Diff.TYPE type;
-            int lineNum;
-            List expLines = delta.getOriginal().getLines();
-            List actLines = delta.getRevised().getLines();
-            if (delta.getType().equals(Delta.TYPE.CHANGE)) {
-                lineNum = delta.getRevised().getPosition() + 1;
-                type = Diff.TYPE.CHANGE;
-            } else if (delta.getType().equals(Delta.TYPE.DELETE)) {
-                lineNum = delta.getOriginal().getPosition() + 1;
-                type = Diff.TYPE.DELETE;
-            } else {
-                lineNum = delta.getRevised().getPosition() + 1;
-                type = Diff.TYPE.INSERT;
+                Diff.TYPE type;
+                int lineNum;
+                List expLines = delta.getOriginal().getLines();
+                List actLines = delta.getRevised().getLines();
+                if (delta.getType().equals(Delta.TYPE.CHANGE)) {
+                    lineNum = delta.getRevised().getPosition() + 1;
+                    type = Diff.TYPE.CHANGE;
+                } else if (delta.getType().equals(Delta.TYPE.DELETE)) {
+                    lineNum = delta.getOriginal().getPosition() + 1;
+                    type = Diff.TYPE.DELETE;
+                } else {
+                    lineNum = delta.getRevised().getPosition() + 1;
+                    type = Diff.TYPE.INSERT;
+                }
+                if (!expLines.isEmpty() && (!actLines.isEmpty() || type.equals(Diff.TYPE.DELETE))) {
+                    //                TextFileDiff
+                    difference.add(
+                            new TextFileDiff(type,
+                                    lineNum,
+                                    (String) expLines.get(0),
+                                    (String) actLines.get(0))
+                    );
+                }
             }
-            if (!expLines.isEmpty() && (!actLines.isEmpty() || type.equals(Diff.TYPE.DELETE))) {
-//                TextFileDiff
-                difference.add(
-                        new TextFileDiff(type,
-                                lineNum,
-                                (String) expLines.get(0),
-                                (String) actLines.get(0))
-                );
-            }
+        } catch (IOException e) {
+            return false;
         }
+
         if (!difference.isEmpty()) {
             diffs.put(expected.getName(), difference);
         }
-
         return difference.isEmpty();
     }
 
-    protected ArrayList<String> getFileContent(File in) throws IOException {
-        ArrayList<String> ret = new ArrayList();
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(in)));
-        String line;
-        while ((line = br.readLine()) != null) {
-            ret.add(line);
+    protected ArrayList<String> getFileContent(File in, boolean isActual) throws IOException {
+        try {
+            ArrayList<String> ret = new ArrayList();
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(in)));
+            String line;
+            while ((line = br.readLine()) != null) {
+                ret.add(line);
+            }
+            br.close();
+            return ret;
+        } catch (IOException e) {
+            ArrayList<Diff> difference = new ArrayList();
+            if (isActual) {
+                difference.add(new MissingFileDiff(Diff.TYPE.DELETE, actual.getName(), isActual));
+            } else {
+                difference.add(new MissingFileDiff(Diff.TYPE.INSERT, actual.getName(), isActual));
+            }
+            diffs.put(expected.getName(), difference);
+            throw e;
         }
-        return ret;
     }
 }
