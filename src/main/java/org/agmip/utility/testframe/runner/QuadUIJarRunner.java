@@ -65,9 +65,13 @@ public class QuadUIJarRunner extends JarRunner {
         argsList.addAll(super.getProcessArguments());
 //        argsList.remove(argsList.size() - 1);
         argsList.add(rawdataPath.getPath());
-        argsList.add(linkPath.getPath());
-        argsList.add(overlayPath.getPath());
-        argsList.add(seasonalPath.getPath());
+        if (!argsList.contains("-n")) {
+            argsList.add(linkPath.getPath());
+            argsList.add(overlayPath.getPath());
+            if (argsList.contains("-s")) {
+                argsList.add(seasonalPath.getPath());
+            }
+        }
         argsList.add(outputDir.getPath());
         return argsList;
     }
