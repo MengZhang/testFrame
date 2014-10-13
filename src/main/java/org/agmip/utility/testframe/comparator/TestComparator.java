@@ -40,6 +40,14 @@ public abstract class TestComparator {
         compareType = null;
         outputDir = actualDir.getParent();
     }
+    
+    public File getExpected() {
+        return this.expected;
+    }
+    
+    public File getActual() {
+        return this.actual;
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -84,9 +92,11 @@ public abstract class TestComparator {
             context.put("diffs", diffs.entrySet());
             context.put("title", title);
             writer = new FileWriter(ret);
-            Reader R = new InputStreamReader(getClass().getResourceAsStream("/compare_report.html"));
-            Velocity.evaluate(context, writer, "Generate compare report", R);
+            Reader reader = new InputStreamReader(getClass().getResourceAsStream("/compare_report.html"));
+            Velocity.evaluate(context, writer, "Generate compare report", reader);
+            writer.flush();
             writer.close();
+            reader.close();
         } catch (IOException ex) {
             LOG.error(Functions.getStackTrace(ex));
         }

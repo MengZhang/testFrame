@@ -113,6 +113,7 @@ public abstract class AppRunner {
         while ((line = brInfo.readLine()) != null) {
             LOG.info("{}: {}", getTitle(), line);
         }
+        brInfo.close();
     }
 
     public HashMap toMap() {

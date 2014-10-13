@@ -174,6 +174,7 @@ public class TestController {
             while ((line = br.readLine()) != null) {
                 sb.append(line.trim());
             }
+            br.close();
             return sb.toString();
         } catch (IOException ex) {
             LOG.error(ex.getMessage());
@@ -226,14 +227,13 @@ public class TestController {
 
     private void handleCompareResult(TestComparator comparator) {
         LOG.info("Test result not match with expected result for {}", comparator.getTitle());
-//        HashMap result = comparator.getDiffs();
-//        for (Object fileName : result.keySet()) {
-//            System.out.println("*** Difference for " + fileName + " file ***");
-//            ArrayList<Diff> diffs = (ArrayList<Diff>) result.get(fileName);
-//            for (Diff diff : diffs) {
-//                System.out.println(diff);
-//            }
-//        }
-
+        HashMap result = comparator.getDiffs();
+        for (Object fileName : result.keySet()) {
+            System.out.println("*** Difference for " + fileName + " file ***");
+            ArrayList<Diff> diffs = (ArrayList<Diff>) result.get(fileName);
+            for (Diff diff : diffs) {
+                LOG.info(diff.getHtmlString());
+            }
+        }
     }
 }
