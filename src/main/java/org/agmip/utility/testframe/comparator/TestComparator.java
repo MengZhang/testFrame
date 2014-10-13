@@ -40,11 +40,11 @@ public abstract class TestComparator {
         compareType = null;
         outputDir = actualDir.getParent();
     }
-    
+
     public File getExpected() {
         return this.expected;
     }
-    
+
     public File getActual() {
         return this.actual;
     }
@@ -68,6 +68,8 @@ public abstract class TestComparator {
     public boolean getLastCompareResult() {
         return diffs.isEmpty();
     }
+
+    public abstract HashMap<File, File> getDiffFiles();
 
     public abstract boolean compare() throws Exception;
 

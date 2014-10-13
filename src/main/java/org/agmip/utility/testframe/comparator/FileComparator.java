@@ -64,9 +64,9 @@ public class FileComparator extends TestComparator {
                     String actLine = "";
                     String expLine = "";
                     if (i < expLines.size()) {
-                        expLine = (String) actLines.get(i);
+                        expLine = (String) expLines.get(i);
                     }
-                    if (i < expLines.size()) {
+                    if (i < actLines.size()) {
                         actLine = (String) actLines.get(i);
                     }
                     difference.add(new TextFileDiff(type, lineNum, expLine, actLine));
@@ -103,5 +103,12 @@ public class FileComparator extends TestComparator {
             diffs.put(expected.getName(), difference);
             throw e;
         }
+    }
+
+    @Override
+    public HashMap<File, File> getDiffFiles() {
+        HashMap<File, File> files = new HashMap();
+        files.put(actual, expected);
+        return files;
     }
 }
