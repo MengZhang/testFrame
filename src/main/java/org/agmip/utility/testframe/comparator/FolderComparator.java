@@ -20,7 +20,7 @@ public class FolderComparator extends TestComparator {
         }
         compareType = Type.FOLDER;
     }
-    
+
     public FolderComparator(String expectedDir, String actualDir) throws Exception {
         this(new File(expectedDir), new File(actualDir));
     }
@@ -87,5 +87,15 @@ public class FolderComparator extends TestComparator {
         } else {
             msgs.addAll(msgArr);
         }
+    }
+
+    @Override
+    public HashMap<File, File> getDiffFiles() {
+        HashMap<File, File> files = new HashMap();
+        for (String fileName : this.diffs.keySet()) {
+            files.put(new File(actual.getPath() + File.separator + fileName),
+                    new File(expected.getPath() + File.separator + fileName));
+        }
+        return files;
     }
 }

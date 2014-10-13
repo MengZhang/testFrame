@@ -60,14 +60,17 @@ public class FileComparator extends TestComparator {
                     lineNum = delta.getRevised().getPosition() + 1;
                     type = Diff.TYPE.INSERT;
                 }
-                if (!expLines.isEmpty() && (!actLines.isEmpty() || type.equals(Diff.TYPE.DELETE))) {
-                    //                TextFileDiff
-                    difference.add(
-                            new TextFileDiff(type,
-                                    lineNum,
-                                    (String) expLines.get(0),
-                                    (String) actLines.get(0))
-                    );
+                for (int i = 0; i < Math.max(actLines.size(), expLines.size()); i++) {
+                    String actLine = "";
+                    String expLine = "";
+                    if (i < expLines.size()) {
+                        expLine = (String) expLines.get(i);
+                    }
+                    if (i < actLines.size()) {
+                        actLine = (String) actLines.get(i);
+                    }
+                    difference.add(new TextFileDiff(type, lineNum, expLine, actLine));
+                    lineNum++;
                 }
             }
         } catch (IOException e) {
@@ -100,5 +103,12 @@ public class FileComparator extends TestComparator {
             diffs.put(expected.getName(), difference);
             throw e;
         }
+    }
+
+    @Override
+    public HashMap<File, File> getDiffFiles() {
+        HashMap<File, File> files = new HashMap();
+        files.put(actual, expected);
+        return files;
     }
 }

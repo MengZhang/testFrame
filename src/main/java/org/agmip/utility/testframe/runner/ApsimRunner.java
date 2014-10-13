@@ -22,15 +22,16 @@ public class ApsimRunner extends ExeRunner {
     @Override
     protected void printSubProcessLog(Process p, Logger LOG) throws IOException {
         BufferedReader brInfo = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        String line;
-        boolean endFlag = false;
-        while ((line = brInfo.readLine()) != null || endFlag) {
+        String line = null;
+//        boolean endFlag = false;
+        while ((line = brInfo.readLine()) != null) {
             LOG.info("{}: {}", getTitle(), line);
-            if (line.contains("exiting") || endFlag) {
+            if (line.contains("exiting")) {
                 p.destroy();
                 break;
             } else if (line.contains("[Pass] Target: Apsim.exe")) {
-                endFlag = true;
+                p.destroy();
+                break;
             }
         }
         brInfo.close();
