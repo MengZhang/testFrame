@@ -46,8 +46,8 @@ public class CsvVarDiff extends Diff {
                 sb.append(String.format("<td class=\"stdTableCell\">%s</td>", expVal));
                 sb2.append(String.format("<td class=\"stdTableCell\">%s</td>", actVal));
             } else {
-                sb.append(String.format("<td class=\"stdTableDiffCell\">%s</td>", expVal));
-                sb2.append(String.format("<td class=\"stdTableDiffCell\">%s</td>", actVal));
+                sb.append(String.format("<td class=\"stdTableDiffCell\"><strong>%s</strong></td>", expVal));
+                sb2.append(String.format("<td class=\"stdTableDiffCell\"><strong>%s</strong></td>", actVal));
             }
         }
         sb.append("</tr><tr><td class=\"stdTableCell\">Actual</td>");
