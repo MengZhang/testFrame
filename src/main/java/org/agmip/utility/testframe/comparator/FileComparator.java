@@ -83,7 +83,7 @@ public class FileComparator extends TestComparator {
         return difference.isEmpty();
     }
 
-    protected ArrayList<String> getFileContent(File in, boolean isActual) throws IOException {
+    private ArrayList<String> getFileContent(File in, boolean isActual) throws IOException {
         try {
             ArrayList<String> ret = new ArrayList();
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(in)));

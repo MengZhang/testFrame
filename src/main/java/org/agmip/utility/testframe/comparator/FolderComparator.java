@@ -47,6 +47,9 @@ public class FolderComparator extends TestComparator {
             if (actFiles.containsKey(fileName)) {
                 File actFile = actFiles.remove(fileName);
                 FileComparator comparator = FileComparatorFactory.getFileComparator(expFile, actFile);
+                if (comparator == null) {
+                    continue;
+                }
                 if (!comparator.compare()) {
                     addDiffMsgArr(fileName, comparator.getDiff());
                 }
