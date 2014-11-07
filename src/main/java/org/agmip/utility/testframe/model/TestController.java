@@ -154,7 +154,7 @@ public class TestController {
         for (AppRunner runner : runners) {
             if (runner.run() != 0) {
                 LOG.info("Error detected, test is terminated!");
-                return;
+                throw new Exception(runner.getTitle() + " is failed");
             } else {
             }
         }
