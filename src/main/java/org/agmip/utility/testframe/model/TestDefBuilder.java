@@ -16,6 +16,7 @@ import org.agmip.utility.testframe.runner.ExeRunner;
 import org.agmip.utility.testframe.runner.JarRunner;
 import org.agmip.utility.testframe.runner.QuadUIJarRunner;
 import org.agmip.utility.testframe.runner.AppRunner;
+import org.agmip.utility.testframe.runner.DssatRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,6 +73,8 @@ public class TestDefBuilder {
             runner = new QuadUIJarRunner(executablePath, workDir, outputDir);
         } else if (runnerType.equals(AppRunner.Type.JAR) || executablePath.toLowerCase().endsWith(".jar")) {
             runner = new JarRunner(executablePath, workDir, outputDir);
+        } else if (runnerType.equals(AppRunner.Type.DSSAT)) {
+            runner = new DssatRunner(executablePath, workDir, outputDir);
         } else if (runnerType.equals(AppRunner.Type.APSIM)) {
             runner = new ApsimRunner(executablePath, workDir, outputDir);
         } else {
