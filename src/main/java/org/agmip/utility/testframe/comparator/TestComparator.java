@@ -31,6 +31,7 @@ public abstract class TestComparator {
     protected String title = "Unknown";
     protected String outputDir; //TODO not used yet
     protected Type compareType;
+    private boolean isDefOutput = true;
     private static final Logger LOG = LoggerFactory.getLogger(TestComparator.class);
 
     public TestComparator(File expectedDir, File actualDir) throws Exception {
@@ -57,6 +58,7 @@ public abstract class TestComparator {
     }
 
     public void setOutputDir(String outputDir) {
+        this.isDefOutput = false;
         this.outputDir = outputDir;
     }
 
@@ -78,7 +80,9 @@ public abstract class TestComparator {
         ret.put("compare_type", compareType.toString());
         ret.put("expected", expected.getPath());
         ret.put("actual", actual.getPath());
-        ret.put("output_dir", outputDir);
+        if (!isDefOutput) {
+            ret.put("output_dir", outputDir);
+        }
         return ret;
     }
 

@@ -137,7 +137,9 @@ public class TestController {
             TestComparator comparator = TestDefBuilder.buildTestComparator(type, expectedPath, actualPath);
             // Register the title
             comparator.setTitle(MapUtil.getValueOr(comparatorDef, "title", ""));
-            comparator.setOutputDir(getRelativePath(comparatorDef, "output_dir", "", runnerIds));
+            if (comparatorDef.containsKey("output_dir")) {
+                comparator.setOutputDir(getRelativePath(comparatorDef, "output_dir", "", runnerIds));
+            }
             // Read CSV comparator feature
             if (comparator instanceof CsvFileComparator) {
                 CsvFileComparator com = (CsvFileComparator) comparator;
