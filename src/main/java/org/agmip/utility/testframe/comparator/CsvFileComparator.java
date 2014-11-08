@@ -82,6 +82,9 @@ public class CsvFileComparator extends FileComparator {
         boolean ret = super.compare();
         if (!ret) {
             ArrayList<Diff> textDiffs = new ArrayList(this.getDiff());
+            if (textDiffs.size() == 1 && textDiffs.get(0) instanceof MissingFileDiff) {
+                return ret;
+            }
             this.getDiff().clear();
             if (!readCsvFileHeaderIdx()) {
                 return ret;
