@@ -3,7 +3,7 @@
 
     <groupId>org.agmip.utility</groupId>
     <artifactId>testFrame</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     
     <parent>
@@ -33,7 +33,7 @@
         <url>https://github.com/agmip/testFrame</url>
         <connection>scm:git:git://github.com/agmip/testFrame.git</connection>
         <developerConnection>scm:git:git@github.com:agmip/testFrame.git</developerConnection>
-        <tag>testFrame-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
