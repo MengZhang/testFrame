@@ -1,32 +1,54 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.agmip.utility</groupId>
     <artifactId>testFrame</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+    
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <name>testFrame</name>
-    <description>
-        AgMIP Test Framework
-    </description>
-    <url>http://www.agmip.org/</url>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>1.6</jdk.version>
-    </properties>
-
+    <url>http://agmip.org/</url>
     <organization>
         <name>AgMIP - Agricultural Model Intercomparison and Improvement Project</name>
         <url>http://www.agmip.org/</url>
     </organization>
+
+    <issueManagement>
+        <url>https://github.com/agmip/testFrame/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
 
     <licenses>
         <license>
             <url>http://raw.github.com/agmip/testFrame/LICENSE</url>
         </license>
     </licenses>
+    <scm>
+        <url>https://github.com/agmip/testFrame</url>
+        <connection>scm:git:git://github.com/agmip/testFrame.git</connection>
+        <developerConnection>scm:git:git@github.com:agmip/testFrame.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <email>meng.zhang15@ufl.edu</email>
+            <name>Meng Zhang</name>
+            <url>https://github.com/mengzhang</url>
+            <id>MengZhang</id>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.6</jdk.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -67,12 +89,6 @@
         </dependency>
     </dependencies>
 
-    <scm>
-        <connection>scm:git:git://github.com/agmip/testFrame.git</connection>
-        <developerConnection>scm:git:git@github.com:agmip/testFrame.git</developerConnection>
-        <url>https://github.com/agmip/testFrame</url>
-        <tag>HEAD</tag>
-    </scm>
     <build>
         <plugins>
             <plugin>
