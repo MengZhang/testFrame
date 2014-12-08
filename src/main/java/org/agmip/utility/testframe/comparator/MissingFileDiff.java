@@ -17,13 +17,10 @@ public class MissingFileDiff extends Diff {
     
     @Override
     public String getHtmlString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("<p>");
         if (isActualMissing) {
-            sb.append(String.format("%s is expected but missing in the result of current run.<br />", fileName));
+            return String.format("%s is expected but missing in the result of current run.<br />", fileName);
         } else {
-            sb.append(String.format("%s is unexpected and existed in the result of current run.<br />", fileName));
+            return String.format("%s is unexpected and existed in the result of current run.<br />", fileName);
         }
-        return sb.toString();
     }
 }

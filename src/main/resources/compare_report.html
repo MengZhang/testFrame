@@ -4,39 +4,61 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>$title</title>
         <style type="text/css">
-            .style1 {
-                margin-left: 40px;
+            .stdDiv {
+                margin-left: 20px;
+                white-space:nowrap;
             }
-            .style2 {
+            .stdTable {
                 border-style: solid;
-                border-width: 1px;
+                border-width: 2px;
+                border-collapse: collapse;
+                width:800px;
             }
-            .style3 {
+            .titleLine {
                 text-align: center;
                 font-size: x-large;
+            }
+            .stdTableHeader {
+                background-color: #00FFFF;
+            }
+            .stdTableCell {
+                border-style: solid;
+                border-width: 1px;
+                border-collapse: collapse;
+            }
+            .stdTableDiffCell {
+                border-style: solid;
+                border-width: 1px;
+                border-collapse: collapse;
+                color: #FF0000;
             }
         </style>
     </head>
     <body>
-        <div class="style3"><strong>$title Report</strong><br /><br />
+        <div class="titleLine"><strong>$title Report</strong><br /><br />
         </div>
-        <div class="style1" id="top">
+        <div class="stdDiv" id="top">
             #foreach ($differences in $diffs)
             <li><a href="#$differences.key">$differences.key</a></li>
             #end
         </div>
         <p>&nbsp;</p>
+        <hr />
         #foreach ($differences in $diffs)
-        <div class="style2" id="$differences.key">
+        <div id="$differences.key">
             <p><a href="#top">Back to top</a></p>
-            <p>
-                &nbsp; <strong>$differences.key</strong>
+            <p>&nbsp; <strong>$differences.key</strong></p>
+            <div class="stdDiv">
                 #foreach ($difference in $differences.value)
-                <p class="style1">$difference.htmlString</p>
+                <div>
+                    $difference.htmlString
+                    <br />
+                </div>
                 #end
-            </p>
+            </div>
             <p><a href="#top">Back to top</a></p>
         </div>
+        <hr />
         #end
     </body>
 </html>

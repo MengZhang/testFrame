@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import org.agmip.util.JSONAdapter;
 import org.agmip.util.MapUtil;
+import org.agmip.utility.testframe.comparator.CsvFileComparator;
 import org.agmip.utility.testframe.comparator.Diff;
 import org.agmip.utility.testframe.comparator.TestComparator;
 import org.agmip.utility.testframe.runner.AppRunner;
@@ -135,10 +136,18 @@ public class TestController {
             TestComparator.Type type = TestComparator.Type.valueOf(compareType.toUpperCase());
             TestComparator comparator = TestDefBuilder.buildTestComparator(type, expectedPath, actualPath);
             // Register the title
-            String title = MapUtil.getValueOr(comparatorDef, "title", "");
-            String outputDir = getRelativePath(comparatorDef, "output_dir", "", runnerIds);
-            comparator.setTitle(title);
-            comparator.setOutputDir(outputDir);
+            comparator.setTitle(MapUtil.getValueOr(comparatorDef, "title", ""));
+            if (comparatorDef.containsKey("output_dir")) {
+                comparator.setOutputDir(getRelativePath(comparatorDef, "output_dir", "", runnerIds));
+            }
+            // Read CSV comparator feature
+            if (comparator instanceof CsvFileComparator) {
+                CsvFileComparator com = (CsvFileComparator) comparator;
+                com.setSpliter(MapUtil.getValueOr(comparatorDef, "spliter", ","));
+                com.setHeaderRawNum(MapUtil.getObjectOr(comparatorDef, "headerRawNum", 0));
+                com.setKeyHeaderName((String) comparatorDef.get("keyHeaderName"));
+                com.setCompareHeaderNames((ArrayList)comparatorDef.get("compareHeaderNames"));
+            }
             comparators.add(comparator);
         }
     }
@@ -147,7 +156,7 @@ public class TestController {
         for (AppRunner runner : runners) {
             if (runner.run() != 0) {
                 LOG.info("Error detected, test is terminated!");
-                return;
+                throw new Exception(runner.getTitle() + " is failed");
             } else {
             }
         }

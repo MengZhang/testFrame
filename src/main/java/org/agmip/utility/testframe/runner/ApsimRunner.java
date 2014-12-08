@@ -51,4 +51,9 @@ public class ApsimRunner extends ExeRunner {
             return ret;
         }
     }
+
+    @Override
+    protected Process getProcess() throws IOException {
+        return getProcessByVersion();
+    }
 }

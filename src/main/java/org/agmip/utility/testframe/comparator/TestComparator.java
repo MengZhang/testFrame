@@ -8,7 +8,6 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.agmip.common.Functions;
-import org.agmip.utility.testframe.model.TestDefBuilder;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
 import org.slf4j.Logger;
@@ -32,7 +31,8 @@ public abstract class TestComparator {
     protected String title = "Unknown";
     protected String outputDir; //TODO not used yet
     protected Type compareType;
-    private static final Logger LOG = LoggerFactory.getLogger(TestDefBuilder.class);
+    private boolean isDefOutput = true;
+    private static final Logger LOG = LoggerFactory.getLogger(TestComparator.class);
 
     public TestComparator(File expectedDir, File actualDir) throws Exception {
         this.expected = expectedDir;
@@ -58,6 +58,7 @@ public abstract class TestComparator {
     }
 
     public void setOutputDir(String outputDir) {
+        this.isDefOutput = false;
         this.outputDir = outputDir;
     }
 
@@ -79,7 +80,9 @@ public abstract class TestComparator {
         ret.put("compare_type", compareType.toString());
         ret.put("expected", expected.getPath());
         ret.put("actual", actual.getPath());
-        ret.put("output_dir", outputDir);
+        if (!isDefOutput) {
+            ret.put("output_dir", outputDir);
+        }
         return ret;
     }
 

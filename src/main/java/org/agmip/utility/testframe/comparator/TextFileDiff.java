@@ -31,7 +31,7 @@ public class TextFileDiff extends Diff {
     @Override
     public String getHtmlString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("line %d:&nbsp;%s<br />", lineNum, super.getHtmlString()));
+        sb.append(String.format("line &lt;%d&gt;:&nbsp;%s<br />", lineNum, super.getHtmlString()));
         sb.append(String.format("<strong>Expected</strong> : %s<br />", getExpLine()));
         sb.append(String.format("<strong>Actual&nbsp;&nbsp</strong> : %s<br />", getActLine()));
         return sb.toString();
